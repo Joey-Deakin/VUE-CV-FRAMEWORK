@@ -5,13 +5,17 @@ module.exports = {
   },
   'extends': [
     'standard',
-    'plugin:vue/recommended'
+    'prettier',
+    'plugin:vue/strongly-recommended'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-console': 'off',
+    'no-debugger': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
-  }
+  },
+  "plugins":[
+    "prettier"
+  ]
 }
