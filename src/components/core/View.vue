@@ -2,10 +2,10 @@
   <v-content>
     <div v-bind:style="title =='User Profile'? '' : styleBotPad">
       <v-fade-transition mode="out-in">
-        <router-view />
+        <router-view/>
       </v-fade-transition>
     </div>
-    <core-footer v-if="$route.name !== 'Maps'" />
+    <core-footer v-if="$route.name !== 'Maps'"/>
   </v-content>
 </template>
 
@@ -13,19 +13,19 @@
 export default {
   data: () => ({
     title: null,
-    styleBotPad: {'padding-bottom': '100px'}
+    styleBotPad: { "padding-bottom": "100px" }
   }),
-  metaInfo () {
+  metaInfo() {
     return {
-      title: 'Joey'
-    }
+      title: "Joey"
+    };
   },
   watch: {
-    '$route' (val) {
-      this.title = val.name
+    $route(val) {
+      this.title = val.name;
     }
-  },
-}
+  }
+};
 </script>
 
 <style>

@@ -59,6 +59,12 @@ export default {
         text: "Dashboard"
       },
       {
+        to: "/resume",
+        icon: "mdi-bell",
+        text: "Resume"
+      }
+      /*
+      {
         to: "/table-list",
         icon: "mdi-clipboard-outline",
         text: "Table List"
@@ -77,12 +83,8 @@ export default {
         to: "/maps",
         icon: "mdi-map-marker",
         text: "Maps"
-      },
-      {
-        to: "/resume",
-        icon: "mdi-bell",
-        text: "Resume"
       }
+      */
     ],
     responsive: false
   }),

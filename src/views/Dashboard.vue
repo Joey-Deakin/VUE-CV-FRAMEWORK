@@ -5,75 +5,83 @@
         <material-chart-card
           :data="dailySalesChart.data"
           :options="dailySalesChart.options"
-          color="info"
+          color="red"
           type="Line"
         >
-          <h4 class="title font-weight-light">Daily Sales</h4>
+          <h4 class="title font-weight-light">Full Stack skills</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon color="green" small>mdi-arrow-up</v-icon>
-            <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
+            <span class="green--text">224%</span>&nbsp;
+            increase in 3 years. I am commited to Web Development.
           </p>
 
           <template slot="actions">
             <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-            <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
+            <span class="caption grey--text font-weight-light">updated 2 months ago</span>
           </template>
         </material-chart-card>
       </v-flex>
+
       <v-flex md12 sm12 lg4>
         <material-chart-card
-          :data="emailsSubscriptionChart.data"
-          :options="emailsSubscriptionChart.options"
-          :responsive-options="emailsSubscriptionChart.responsiveOptions"
-          color="red"
+          :data="frontChart.data"
+          :options="frontChart.options"
+          :responsive-options="frontChart.responsiveOptions"
+          color="info"
           type="Bar"
         >
-          <h4 class="title font-weight-light">Email Subscription</h4>
-          <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
+          <h4 class="title font-weight-light">Front-end Skillset</h4>
+          <p
+            class="category d-inline-flex font-weight-light"
+          >I specialise in applications written in Vue. I am with knowledge in many JS ecosystem, by using many libraries like React, Redux, Vue, Vuex, Vuetify, Axios, Moment, jQuery, jsPDF and whatever else was needed.</p>
 
           <template slot="actions">
             <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-            <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
+            <span class="caption grey--text font-weight-light">updated 1 month ago</span>
           </template>
         </material-chart-card>
       </v-flex>
+
       <v-flex md12 sm12 lg4>
         <material-chart-card
-          :data="dataCompletedTasksChart.data"
-          :options="dataCompletedTasksChart.options"
+          :data="backChart.data"
+          :options="backChart.options"
+          :responsive-options="backChart.responsiveOptions"
           color="green"
-          type="Line"
+          type="Bar"
         >
-          <h3 class="title font-weight-light">Completed Tasks</h3>
-          <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
+          <h4 class="title font-weight-light">Back-end Skillset</h4>
+          <p
+            class="category d-inline-flex font-weight-light"
+          >In back-end development, my current stack involves raw PHP and OracleSQL, and alternatively Firebase or ZEND framework. I value the development speed, performance and reliability at first.</p>
 
           <template slot="actions">
             <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
+            <span class="caption grey--text font-weight-light">updated 1 month ago</span>
           </template>
         </material-chart-card>
       </v-flex>
+
       <v-flex sm6 xs12 md6 lg3>
         <material-stats-card
           color="green"
           icon="mdi-store"
-          title="Revenue"
-          value="$34,245"
+          title="Individual Projects"
+          value="9"
           sub-icon="mdi-calendar"
-          sub-text="Last 24 Hours"
+          sub-text="Last 3 Years"
         />
       </v-flex>
       <v-flex sm6 xs12 md6 lg3>
         <material-stats-card
           color="orange"
           icon="mdi-content-copy"
-          title="Used Space"
-          value="49/50"
-          small-value="GB"
+          title="Used Front-end Frameworks"
+          value="2/3"
+          small-value
           sub-icon="mdi-alert"
           sub-icon-color="error"
-          sub-text="Get More Space..."
+          sub-text="Not a fan of Angular.js!"
           sub-text-color="text-primary"
         />
       </v-flex>
@@ -90,9 +98,9 @@
       <v-flex sm6 xs12 md6 lg3>
         <material-stats-card
           color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
+          icon="mdi-account-supervisor"
+          title="Clients"
+          value="+12"
           sub-icon="mdi-update"
           sub-text="Just Updated"
         />
@@ -100,8 +108,8 @@
       <v-flex md12 lg6>
         <material-card
           color="orange"
-          title="Employee Stats"
-          text="New employees on 15th September, 2016"
+          title="My Favourite JavaScript Libraries Stats"
+          text="Based on personal preference, 2018"
         >
           <v-data-table :headers="headers" :items="items" hide-actions>
             <template slot="headerCell" slot-scope="{ header }">
@@ -123,7 +131,7 @@
             <v-tabs v-model="tabs" color="transparent" slider-color="white">
               <span class="subheading font-weight-light mr-3" style="align-self: center">Tasks:</span>
               <v-tab class="mr-3">
-                <v-icon class="mr-2">mdi-bug</v-icon>Bugs
+                <v-icon class="mr-2">mdi-bug</v-icon>Self-learning
               </v-tab>
               <v-tab class="mr-3">
                 <v-icon class="mr-2">mdi-code-tags</v-icon>Website
@@ -141,7 +149,7 @@
                   <v-list-tile-action>
                     <v-checkbox :value="list[0]" color="green"/>
                   </v-list-tile-action>
-                  <v-list-tile-title>Sign contract for "What are conference organized afraid of?"</v-list-tile-title>
+                  <v-list-tile-title>A resuable framework for Deakin Faculty of Health Logbook</v-list-tile-title>
                   <div class="d-flex">
                     <v-tooltip top content-class="top">
                       <v-btn slot="activator" class="v-btn--simple" color="success" icon>
@@ -162,7 +170,7 @@
                   <v-list-tile-action>
                     <v-checkbox :value="list[1]" color="success"/>
                   </v-list-tile-action>
-                  <v-list-tile-title>Lines From Great Russian Literature? Or E-mails From My Boss?</v-list-tile-title>
+                  <v-list-tile-title>Migrate my personal projects to firebase</v-list-tile-title>
                   <div class="d-flex">
                     <v-tooltip top content-class="top">
                       <v-btn slot="activator" class="v-btn--simple" color="success" icon>
@@ -215,15 +223,15 @@ export default {
     return {
       dailySalesChart: {
         data: {
-          labels: ["M", "T", "W", "T", "F", "S", "S"],
-          series: [[12, 17, 7, 17, 23, 18, 38]]
+          labels: ["2014", "2015", "2016", "2017", "2018"],
+          series: [[3, 4, 7, 11, 16]]
         },
         options: {
           lineSmooth: this.$chartist.Interpolation.cardinal({
             tension: 0
           }),
           low: 0,
-          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          high: 30, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: {
             top: 0,
             right: 0,
@@ -251,30 +259,66 @@ export default {
           }
         }
       },
-      emailsSubscriptionChart: {
+
+      frontChart: {
         data: {
           labels: [
-            "Ja",
-            "Fe",
-            "Ma",
-            "Ap",
-            "Mai",
-            "Ju",
-            "Jul",
-            "Au",
-            "Se",
-            "Oc",
-            "No",
-            "De"
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive",
+            "Vue/React",
+            "jQuery",
+            "Webpack"
           ],
-          series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
+          series: [[90, 85, 85, 80, 80, 78, 75]]
         },
         options: {
           axisX: {
             showGrid: false
           },
-          low: 0,
-          high: 1000,
+          low: 40,
+          high: 100,
+          chartPadding: {
+            top: 0,
+            right: 5,
+            bottom: 0,
+            left: 0
+          }
+        },
+        responsiveOptions: [
+          [
+            "screen and (max-width: 640px)",
+            {
+              seriesBarDistance: 5,
+              axisX: {
+                labelInterpolationFnc: function(value) {
+                  return value[0];
+                }
+              }
+            }
+          ]
+        ]
+      },
+      backChart: {
+        data: {
+          labels: [
+            "PHP",
+            "RESTful API",
+            "OracleSQL",
+            "Firebase",
+            "MongoDB",
+            "ZEND",
+            "Node.js"
+          ],
+          series: [[90, 90, 85, 80, 80, 78, 75]]
+        },
+        options: {
+          axisX: {
+            showGrid: false
+          },
+          low: 40,
+          high: 100,
           chartPadding: {
             top: 0,
             right: 5,
@@ -309,53 +353,53 @@ export default {
         },
         {
           sortable: false,
-          text: "Salary",
+          text: "GitHub Stars",
           value: "salary",
           align: "right"
         },
         {
           sortable: false,
-          text: "Country",
+          text: "Description",
           value: "country",
           align: "right"
         },
         {
           sortable: false,
-          text: "City",
+          text: "Website",
           value: "city",
           align: "right"
         }
       ],
       items: [
         {
-          name: "Dakota Rice",
-          country: "Niger",
-          city: "Oud-Tunrhout",
-          salary: "$35,738"
+          name: "Vue.js",
+          country: "Progressive, incrementally-adoptable",
+          city: "github.com/vuejs/vue",
+          salary: "126,384"
         },
         {
-          name: "Minerva Hooper",
-          country: "Curaçao",
-          city: "Sinaai-Waas",
-          salary: "$23,738"
+          name: "Vuetify.js",
+          country: "Material Design Component Framework",
+          city: "vuetifyjs.com/en",
+          salary: "16,738"
         },
         {
-          name: "Sage Rodriguez",
-          country: "Netherlands",
-          city: "Overland Park",
-          salary: "$56,142"
+          name: "Axios.js",
+          country: "Promise based HTTP for the browser and node.js",
+          city: "github.com/axios/axios",
+          salary: "54,265"
         },
         {
-          name: "Philip Chanley",
-          country: "Korea, South",
-          city: "Gloucester",
-          salary: "$38,735"
+          name: "Node.js",
+          country: "JavaScript runtime",
+          city: "nodejs.org/en",
+          salary: "57,735"
         },
         {
-          name: "Doris Greene",
-          country: "Malawi",
-          city: "Feldkirchen in Kārnten",
-          salary: "$63,542"
+          name: "Moment.js",
+          country: "Parse and manipulate dates in JavaScript",
+          city: "momentjs.com",
+          salary: "39,981"
         }
       ],
       tabs: 0,
